@@ -9,10 +9,10 @@ const articleSchema = new Schema(
     image: { type: String, minlength: 1, required: true },
     price: { type: Number, min: 1 },
     stock: { type: Number },
-    category: { type: String, minlength: 1 }, //Esto debería ser un objectId?
     topSeller: { type: Boolean },
   },
   { timestamps: true },
+  {},
 );
 
 articleSchema.set("toJSON", { virtuals: true });

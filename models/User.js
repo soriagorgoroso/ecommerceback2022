@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
 
-//const Tweet = require("./Tweet");
-
 const userSchema = new Schema(
   {
     firstname: { type: String, minlength: 2, maxlength: 20, required: true },
@@ -24,11 +22,10 @@ const userSchema = new Schema(
       match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "Please fill a valid email address"],
     },
     password: { type: String, required: true },
-    description: { type: String, maxlength: 300 },
-    avatar: { type: String },
-    tweets: [{ type: Schema.Types.ObjectId, ref: "Tweet" }],
-    following: [{ type: Schema.Types.ObjectId, ref: "User" }],
-    followers: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    adress: { type: String, maxlength: 100, required: true },
+    telephone: { type: Number, maxlength: 30, required: true },
+    orders: [{ type: Schema.Types.ObjectId, ref: "Orders" }],
+    admin: { type: Boolean },
     tokens: [],
   },
   { timestamps: true },

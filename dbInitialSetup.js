@@ -10,7 +10,8 @@ module.exports = async () => {
 
   // Ejecutar seeders (datos de prueba):
   await require("./seeders/userSeeder")();
-  await require("./seeders/tweetSeeder")();
+  await require("./seeders/articleSeeder")();
+  await require("./seeders/categorySeeder")();
   //Funcion para agregar seguidos
   async function setFollowings() {
     try {

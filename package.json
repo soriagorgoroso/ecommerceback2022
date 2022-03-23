@@ -23,7 +23,8 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.2.3",
     "passport": "^0.5.2",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "slugify": "^1.6.5"
   },
   "description": "Hack Academy - Ejemplo de MVC y Sequelize",
   "devDependencies": {

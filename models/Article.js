@@ -17,6 +17,6 @@ const articleSchema = new Schema(
 
 articleSchema.set("toJSON", { virtuals: true });
 
-const Article = mongoose.model("Tweet", articleSchema);
+const Article = mongoose.model("Article", articleSchema);
 
 module.exports = Article;

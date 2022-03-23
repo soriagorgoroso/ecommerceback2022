@@ -11,6 +11,7 @@ const articleSchema = new Schema(
     stock: { type: Number },
     category: { type: Schema.Types.ObjectId, ref: "Category" },
     topSeller: { type: Boolean },
+    ibus: { type: String },
   },
   { timestamps: true },
   slugify(this.name, {

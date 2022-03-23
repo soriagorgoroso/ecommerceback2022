@@ -2,17 +2,21 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 //const User = require("./User");
 
-const tweetSchema = new Schema(
+const articleSchema = new Schema(
   {
-    content: { type: String, minlength: 1, maxlength: 140, required: true },
-    author: { type: Schema.Types.ObjectId, ref: "User" },
-    likes: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    name: { type: String, minlength: 1, required: true },
+    description: { type: String, minlength: 1, required: true },
+    image: { type: String, minlength: 1, required: true },
+    price: { type: Number, min: 1 },
+    stock: { type: Number },
+    category: { type: String, minlength: 1 }, //Esto debería ser un objectId?
+    topSeller: { type: Boolean },
   },
   { timestamps: true },
 );
 
-tweetSchema.set("toJSON", { virtuals: true });
+articleSchema.set("toJSON", { virtuals: true });
 
-const Tweet = mongoose.model("Tweet", tweetSchema);
+const Article = mongoose.model("Tweet", articleSchema);
 
-module.exports = Tweet;
+module.exports = Article;

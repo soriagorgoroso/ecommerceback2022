@@ -9,6 +9,7 @@ const articleSchema = new Schema(
     image: { type: String, minlength: 1, required: true },
     price: { type: Number, min: 1 },
     stock: { type: Number },
+    category: { type: Schema.Types.ObjectId, ref: "Category" },
     topSeller: { type: Boolean },
   },
   { timestamps: true },

@@ -24,8 +24,9 @@ const userSchema = new Schema(
     password: { type: String, required: true },
     address: { type: String, maxlength: 100, required: true },
     telephone: { type: Number, maxlength: 30, required: true },
-    orders: [{ type: Schema.Types.ObjectId, ref: "Orders" }],
     isAdmin: { type: Boolean, default: false },
+    orders: [{ type: Schema.Types.ObjectId, ref: "Orders" }],
+
     tokens: [],
   },
   { timestamps: true },

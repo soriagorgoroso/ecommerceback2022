@@ -4,7 +4,7 @@ module.exports = async () => {
   await User.deleteMany();
   const users = [];
 
-  const user = new User({
+  const admin = new User({
     firstname: "admin",
     lastname: "admin",
     username: "admin",
@@ -13,6 +13,20 @@ module.exports = async () => {
     address: "Hack Beer 1234",
     telephone: 123456789,
     isAdmin: true,
+    orders: [],
+    tokens: [],
+  });
+  users.push(admin);
+
+  const user = new User({
+    firstname: "user",
+    lastname: "user",
+    username: "user",
+    email: "user@hackbeer.com",
+    password: "user",
+    address: "Calle A 1234",
+    telephone: 987654321,
+    isAdmin: false,
     orders: [],
     tokens: [],
   });

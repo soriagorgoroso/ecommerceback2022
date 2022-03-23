@@ -13,8 +13,8 @@ const orderSchema = new Schema(
     ],
     state: {
       type: String,
-      enum: ["Not Ready", "In Process", "Ready"],
-      default: "Not Ready",
+      enum: ["Sin Pago", "Pago", "Enviado", "Entregado"],
+      default: "Sin Pago",
     },
   },
 

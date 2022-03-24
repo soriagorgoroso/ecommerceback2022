@@ -12,7 +12,7 @@ module.exports = async () => {
   //   });
   //   console.log(category);
   // }
-  console.log(categories);
+  //console.log(categories);
   await Category.create(categories);
   console.log("[Database] Se corrió el seeder de Category.");
 };

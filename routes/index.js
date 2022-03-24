@@ -1,7 +1,11 @@
 const userRoutes = require("./userRoutes");
-const tweetRoutes = require("./tweetRoutes");
+const articleRoutes = require("./articleRoutes");
+const categoryRoutes = require("./categoryRoutes");
+const orderRoutes = require("./orderRoutes");
 
 module.exports = (app) => {
   app.use(userRoutes);
-  app.use(tweetRoutes);
+  app.use(articleRoutes);
+  app.use(categoryRoutes);
+  app.use(orderRoutes);
 };

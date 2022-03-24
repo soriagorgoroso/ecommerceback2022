@@ -25,7 +25,7 @@ async function show(req, res) {
 async function create(req, res) {
   try {
     const newCategoryData = req.body;
-    const newCategory = await Category.create({ newCategoryData });
+    const newCategory = await Category.create(newCategoryData);
 
     res.json(newCategory);
   } catch (error) {
@@ -56,7 +56,7 @@ async function update(req, res) {
     const categoryId = req.params.id;
     const fieldsToEdit = req.body;
 
-    const updatedCategoryData = await Category.updateOne(categoryId, { fieldsToEdit });
+    const updatedCategoryData = await Category.updateOne({ categoryId }, fieldsToEdit);
 
     res.json(updatedCategoryData);
   } catch (error) {

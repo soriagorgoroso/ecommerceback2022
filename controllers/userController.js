@@ -44,9 +44,9 @@ async function store(req, res) {
 
 async function newToken(req, res) {
   try {
-    const user = await User.findOne({ username: req.body.email });
-    console.log(user);
-    const correctPassword = user.comparePassword(req.body.password);
+    const user = await User.findOne({ email: req.body.email });
+
+    const correctPassword = await user.validPassword(req.body.password);
 
     if (correctPassword) {
       const newPayload = {
@@ -58,7 +58,7 @@ async function newToken(req, res) {
       res.json({ id: user.id, email: user.email, token: newJwt });
     }
   } catch (error) {
-    res.status(401).json({ msg: "Wrong credentials." });
+    res.status(401).json(error);
   }
 }
 

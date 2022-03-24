@@ -10,7 +10,7 @@ const cervezas = [
   },
   {
     name: "ALBOROTO",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -19,7 +19,7 @@ const cervezas = [
   },
   {
     name: "FATAL",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -28,7 +28,7 @@ const cervezas = [
   },
   {
     name: "DESMADRE",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -37,7 +37,7 @@ const cervezas = [
   },
   {
     name: "FLOR DE LIO",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA ",
     sizecc: 473,
     ibus: "6.0%",
@@ -46,7 +46,7 @@ const cervezas = [
   },
   {
     name: "ROMPECABEZAS",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "10.5%",
@@ -55,7 +55,7 @@ const cervezas = [
   },
   {
     name: "DOBLE CHASQUIBUM",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.5%",
@@ -64,7 +64,7 @@ const cervezas = [
   },
   {
     name: "PATATÚS",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -73,7 +73,7 @@ const cervezas = [
   },
   {
     name: "CHUSMA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA  ",
     sizecc: 473,
     ibus: "6.8%",
@@ -81,7 +81,7 @@ const cervezas = [
   },
   {
     name: "RENEGADA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -90,7 +90,7 @@ const cervezas = [
   },
   {
     name: "FUA MONO",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -99,7 +99,7 @@ const cervezas = [
   },
   {
     name: "CHÚCARA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA ",
     sizecc: 473,
     ibus: "8.0%",
@@ -108,7 +108,7 @@ const cervezas = [
   },
   {
     name: "CHÚCARA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -117,7 +117,7 @@ const cervezas = [
   },
   {
     name: "CHASQUIBUM III",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA ",
     sizecc: 473,
     ibus: "5.5%",
@@ -126,7 +126,7 @@ const cervezas = [
   },
   {
     name: "PITUCA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -135,7 +135,7 @@ const cervezas = [
   },
   {
     name: "OPA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -144,7 +144,7 @@ const cervezas = [
   },
   {
     name: "SIN VUELTAS",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -154,7 +154,7 @@ const cervezas = [
 
   {
     name: "MATUNGA",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -164,7 +164,7 @@ const cervezas = [
 
   {
     name: "MATURRANGO",
-    precio: 4.5,
+    price: 4.5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -177,7 +177,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "6.0%",
-    about:
+    description:
       "Con Strange Brewing, exageramos la cantidad de arándanos, coco tostado y coco fresco para esta cerveza, además de un toque de vainilla y maple syrup. Frutal, dulce y sedosa. CONTIENE LACTOSA.La emblemática New England Ipa de Malafama. Usamos en gran cantidad el distintivo lúpulo Sabro sobre una base de malta inglesa, avena y avena malteada. Muchas notas a frutos tropicales, coco fresco y tangerina. Cuerpo sedoso y amargor medio.",
   },
   {
@@ -186,7 +186,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "4.5%",
-    about:
+    description:
       "No nos cansamos de combinar ingredientes para nuestras sours. Para hacerla nos inspiramos en las deliciosas carrot cakes, por eso le agregamos tremenda cantidad de zanahoria y canela, con un toque de lactosa",
   },
   {
@@ -195,7 +195,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "7.0%",
-    about:
+    description:
       "Esta sour es un quilombo... Elegimos las mejores frambuesas y frutillas de Melilla para agregar en enorme cantidad a esta sour. De color rojo intenso y muy ácida. CONTIENE LACTOSA.",
   },
   {
@@ -204,7 +204,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "5.0%",
-    about:
+    description:
       "Lo más parecido a una limonada de sandía que vas a encontrar. Pizpireta es una sour con enormes cantidades de sandía madura. Ácida y refrescante.",
   },
   {
@@ -213,7 +213,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "4.5%",
-    about: "Golden sour. Sin fruta, sin lactosa. Muy refrescante, ácida y con buen cuerpo.",
+    description: "Golden sour. Sin fruta, sin lactosa. Muy refrescante, ácida y con buen cuerpo.",
   },
   {
     name: "A LO BESTIA C/ MORAS Y TANGERINAS",
@@ -221,7 +221,7 @@ const cervezas = [
     category: "Sour ",
     sizecc: 473,
     ibus: "4.5%",
-    about:
+    description:
       "A Lo Bestia es nuestra reconocida cerveza ácida en la cual varian sus agregados de fruta en cada lote, siguiendo un solo requisito: cantidades exageradas. Refrescante, ácida y frutal. En esta ocasión elegimos usar moras, pulpa de tangerina y vainas de vainilla, los cuales combinan perfectamente junto a un nivel de acidez alto el cual no te deja parar de tomar. CONTIENE LACTOSA.",
   },
   {

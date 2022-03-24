@@ -1,7 +1,7 @@
-const { User } = require("../models");
+const { User } = require("../models/User");
 
 module.exports = async () => {
-  await User.deleteMany();
+  // await User.deleteMany();
   const users = [];
 
   const admin = new User({

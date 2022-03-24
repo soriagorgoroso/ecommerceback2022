@@ -7,7 +7,11 @@ const tokenExist = require("../middlewares/tokenExist");
 //*****    Ruta para home *************** */
 categoryRouter.get("/categories", categoryController.index);
 //******    Ruta para obtener una category************ */
+<<<<<<< Updated upstream
 categoryRouter.get("/categories/:id", categoryController.show);
+=======
+categoryRouter.get("/categories/:name", categoryController.show);
+>>>>>>> Stashed changes
 //******    Midlleware para rutas privadas ************ */
 categoryRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 //******    Ruta obtener category ************ */

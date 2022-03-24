@@ -1,6 +1,5 @@
 const express = require("express");
 const orderRouter = express.Router();
-const express = require("express");
 const orderController = require("../controllers/orderController");
 const checkJwt = require("express-jwt");
 const tokenExist = require("../middlewares/tokenExist");

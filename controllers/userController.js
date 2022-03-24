@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const jwt = require("jsonwebtoken");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -41,6 +42,26 @@ async function store(req, res) {
   }
 }
 
+async function newToken(req, res) {
+  try {
+    const user = await User.findOne({ username: req.body.email });
+    console.log(user);
+    const correctPassword = user.comparePassword(req.body.password);
+
+    if (correctPassword) {
+      const newPayload = {
+        sub: user.email,
+        userID: user.id,
+      };
+      const newJwt = jwt.sign(newPayload, process.env.ACCESS_TOKEN_SECRET);
+
+      res.json({ id: user.id, email: user.email, token: newJwt });
+    }
+  } catch (error) {
+    res.status(401).json({ msg: "Wrong credentials." });
+  }
+}
+
 // Show the form for editing the specified resource.
 //async function edit(req, res) {}
 
@@ -69,4 +90,5 @@ module.exports = {
   //edit,
   update,
   //destroy,
+  newToken,
 };

@@ -14,4 +14,7 @@ userRouter.post("/users", userController.store);
 // Update the specified resource in storage.
 userRouter.patch("/users/:username", userController.update);
 
+//Login
+userRouter.post("/tokens", userController.newToken);
+
 module.exports = userRouter;

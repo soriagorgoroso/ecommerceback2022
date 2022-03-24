@@ -13,9 +13,9 @@ categoryRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithm
 //******    Ruta obtener category ************ */
 categoryRouter.use(tokenExist);
 //******    Ruta crear category ************ */
-categoryRouter.post("/categorys", categoryController.store);
+categoryRouter.post("/categorys", categoryController.create);
 //******    Ruta editar category ************ */
-categoryRouter.patch("/categorys-:id", categoryController.store);
+categoryRouter.patch("/categorys-:id", categoryController.update);
 //*****   Ruta delete tweet ************* */
 categoryRouter.delete("/categorys/:id", categoryController.destroy);
 

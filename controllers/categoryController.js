@@ -3,10 +3,8 @@ const Category = require("../models/Category");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const postCategory = req.category;
-    const { category } = await category.findById(req.category.sub, { category: 1 });
-
-    res.status(200).json({ postCategory });
+    const category = await Category.find();
+    res.status(200).json({ category });
   } catch (error) {
     res.status(400).json({ message: error });
   }
@@ -24,27 +22,47 @@ async function show(req, res) {
   }
 }
 // Show the form for creating a new resource
-async function create(req, res) {}
-
-// Store a newly created resource in storage.
-async function store(req, res) {
+async function create(req, res) {
   try {
-    const newCategory = await new Category({
-      content: req.body.name,
-    });
-    console.log(newCategory);
-    await newCategory.save();
-    Category.findByIdAndUpdate(req.category.sub, { $push: { category: newCategory.id } });
+    const newCategoryData = req.body;
+    const newCategory = await Category.create({ newCategoryData });
+
+    res.json(newCategory);
   } catch (error) {
     console.log(error);
-    res.status(400).json({ message: "There was an error" });
   }
 }
+
+// Store a newly created resource in storage.
+// async function store(req, res) {
+// try {
+//     const newCategory = await new Category({
+//     content: req.body.name,
+//     });
+//     console.log(newCategory);
+//     await newCategory.save();
+//     Category.findByIdAndUpdate(req.category.sub, { $push: { category: newCategory.id } });
+// } catch (error) {
+//     console.log(error);
+//     res.status(400).json({ message: "There was an error" });
+// }
+// }
 // Show the form for editing the specified resource.
 async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  try {
+    const categoryId = req.params.id;
+    const fieldsToEdit = req.body;
+
+    const updatedCategoryData = await Category.updateOne(categoryId, { fieldsToEdit });
+
+    res.json(updatedCategoryData);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {

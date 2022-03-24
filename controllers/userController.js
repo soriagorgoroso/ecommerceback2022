@@ -52,10 +52,11 @@ async function newToken(req, res) {
       const newPayload = {
         sub: user.email,
         userID: user.id,
+        isAdmin: user.isAdmin,
       };
       const newJwt = jwt.sign(newPayload, process.env.ACCESS_TOKEN_SECRET);
 
-      res.json({ id: user.id, email: user.email, token: newJwt });
+      res.json({ id: user.id, email: user.email, isAdmin: user.isAdmin, token: newJwt });
     }
   } catch (error) {
     res.status(401).json(error);

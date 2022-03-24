@@ -3,8 +3,8 @@ const Category = require("../models/Category");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const category = await Category.find();
-    res.status(200).json({ category });
+    const categorys = await Category.find();
+    res.status(200).json(categorys);
   } catch (error) {
     res.status(400).json({ message: error });
   }
@@ -12,10 +12,12 @@ async function index(req, res) {
 // Display the specified resource.
 async function show(req, res) {
   try {
-    const postCategory = await Category.findOne({ name: req.params.name });
-    const formattedDate = format(postCategory.createdAt, "MMMM yyyy");
+    const category = await Category.findOne({ name: req.params.name });
+    console.log(category);
+    //const formattedDate = format(postCategory.createdAt, "MMMM yyyy");
+    //console.log(formattedDate);
 
-    res.status(200).json({ postCategory, formattedDate });
+    res.status(200).json(category);
   } catch (error) {
     console.log(error.message);
     res.status(404).json({ message: "error" });

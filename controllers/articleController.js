@@ -23,8 +23,7 @@ async function show(req, res) {
 async function create(req, res) {
   try {
     const newArticleData = req.body;
-    const newArticle = await Article.create({ newArticleData });
-
+    const newArticle = await Article.create(newArticleData);
     res.json(newArticle);
   } catch (error) {
     console.log(error);
@@ -36,7 +35,7 @@ async function update(req, res) {
     const articleId = req.params.id;
     const fieldsToEdit = req.body;
 
-    const updatedArticleData = await Article.updateOne(articleId, { fieldsToEdit });
+    const updatedArticleData = await Article.updateOne({ articleId }, fieldsToEdit);
 
     res.json(updatedArticleData);
   } catch (error) {

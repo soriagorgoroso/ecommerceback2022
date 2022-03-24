@@ -20,8 +20,8 @@ const orderSchema = new Schema(
 
   { timestamps: true },
 );
-tweetSchema.set("toJSON", { virtuals: true });
+orderSchema.set("toJSON", { virtuals: true });
 
-const Order = mongose.model("Order", orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 module.exports = Order;

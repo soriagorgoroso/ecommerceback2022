@@ -91,7 +91,7 @@ module.exports = {
   index,
   show,
   create,
-  store,
+  //   store,
   edit,
   update,
   destroy,

@@ -11,6 +11,6 @@ articleRouter.get("/articles/:id", show); //PODRIAMOS MOSTRAR EL NOMBRE DEL PROD
 
 articleRouter.post("/articles", create);
 articleRouter.patch("/articles/:id", update);
-articleRouter.delete("/articles/:id", destroy);
+articleRouter.delete("/articles/:id", destroy); //IMPLEMENTAR SOFT DELETE
 
 module.exports = articleRouter;

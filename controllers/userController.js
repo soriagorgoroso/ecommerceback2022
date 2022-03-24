@@ -29,16 +29,15 @@ async function show(req, res) {
 async function store(req, res) {
   try {
     const userNameExists = await User.findOne({ username: req.body.username });
+    console.log(userNameExists);
     if (userNameExists) {
       res.status(409).json({ msg: "Username already in use, pick another one." });
     } else {
-      const user = await User.create({
-        ...req.body,
-      });
+      const user = await User.create(req.body);
       res.json({ user, msg: "User created succesfully" });
     }
   } catch (error) {
-    res.status(400).json("error");
+    res.status(400).json(error);
   }
 }
 
@@ -46,7 +45,15 @@ async function store(req, res) {
 //async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  try {
+    const username = req.params.username;
+    const updatedUser = await User.updateOne({ username }, req.body);
+    res.json({ updatedUser, msg: "User updated succesfully" });
+  } catch (error) {
+    res.status(400).json(error);
+  }
+}
 
 // Remove the specified resource from storage.
 //async function destroy(req, res) {}

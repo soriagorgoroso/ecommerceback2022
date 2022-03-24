@@ -12,6 +12,6 @@ userRouter.get("/users/:username", userController.show);
 userRouter.post("/users", userController.store);
 
 // Update the specified resource in storage.
-userRouter.patch("/users", userController.update);
+userRouter.patch("/users/:username", userController.update);
 
 module.exports = userRouter;

@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-const { User } = require("../models/User");
-=======
 const User = require("../models/User");
->>>>>>> Stashed changes
 
 module.exports = async () => {
-  // await User.deleteMany();
+  await User.deleteMany();
   const users = [];
 
   const admin = new User({

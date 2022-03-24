@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 module.exports = async () => {
   // Crear tablas:
-  mongoose.connect(process.env.DB_CONNECTION_STRING);
+  mongoose.connect("mongodb://localhost:27017/e-commerce-db");
   // console.log("[Database] ¡Las tablas fueron creadas!");
 
   // Ejecutar seeders (datos de prueba):

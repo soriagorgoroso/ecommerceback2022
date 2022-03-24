@@ -7,7 +7,11 @@ const cervezas = [
     ibus: "6.5%",
     description:
       "La emblemática New England Ipa de Malafama. Usamos en gran cantidad el distintivo lúpulo Sabro sobre una base de malta inglesa, avena y avena malteada. Muchas notas a frutos tropicales, coco fresco y tangerina. Cuerpo sedoso y amargor medio.",
+
+    stock: 15,
+    topSeller: false,
   },
+
   {
     name: "ALBOROTO",
     price: 4.5,
@@ -17,6 +21,7 @@ const cervezas = [
     description:
       "Nuestra clásica West Coast IPA elaborada siempre con lúpulos frescos de Nueva Zelanda. Una cerveza con perfil cítrico y tropical pero con un amargor pronunciado y final seco que la vuelve super refrescante.",
   },
+
   {
     name: "FATAL",
     price: 4.5,
@@ -289,4 +294,4 @@ const cervezas = [
   },
 ];
 
-export default cervezas;
+module.exports = cervezas;

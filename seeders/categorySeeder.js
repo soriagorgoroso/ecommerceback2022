@@ -1,12 +1,18 @@
 const Category = require("../models/Category");
+
 module.exports = async () => {
-  const categorys = [];
+  await Category.deleteMany();
+  const categories = [];
   const categoryName = ["Ipa", "Apa", "Neipa", "Sour", "Stout", "Blonde"];
-  for (let i = 0; i < categoryName.length; i++) {
-    categorys.push({
-      categoryName: i,
-    });
-  }
-  await Category.create(categorys);
-  console.log("[Database] Se corrió el seeder de Catgory.");
+
+  categoryName.forEach((category) => categories.push({ name: category }));
+  // for (let category in categoryName) {
+  //   categories.push({
+  //     name: category,
+  //   });
+  //   console.log(category);
+  // }
+  console.log(categories);
+  await Category.create(categories);
+  console.log("[Database] Se corrió el seeder de Category.");
 };

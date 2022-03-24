@@ -1,8 +1,14 @@
 const Article = require("../models/Article");
 const Category = require("../models/Category");
+const cervezas = require("../db/cervezas");
 
 module.exports = async () => {
+  await Article.deleteMany();
   const articles = [];
+
+  cervezas.forEach((cerveza) => {
+    articles.push(cerveza);
+  });
 
   for (let i = 0; i <= 20; i++) {
     const article = new Article({

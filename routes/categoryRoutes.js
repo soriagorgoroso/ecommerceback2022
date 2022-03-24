@@ -19,7 +19,7 @@ categoryRouter.use(tokenExist);
 //******    Ruta crear category ************ */
 categoryRouter.post("/categories", categoryController.create);
 //******    Ruta editar category ************ */
-categoryRouter.patch("/categories:id", categoryController.update);
+categoryRouter.patch("/categories/:id", categoryController.update);
 //*****   Ruta delete tweet ************* */
 categoryRouter.delete("/categories/:id", categoryController.destroy);
 

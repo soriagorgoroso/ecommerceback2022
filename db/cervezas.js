@@ -235,7 +235,7 @@ const cervezas = [
       "Con Strange Brewing, exageramos la cantidad de arándanos, coco tostado y coco fresco para esta cerveza, además de un toque de vainilla y maple syrup. Frutal, dulce y sedosa. CONTIENE LACTOSA.La emblemática New England Ipa de Malafama. Usamos en gran cantidad el distintivo lúpulo Sabro sobre una base de malta inglesa, avena y avena malteada. Muchas notas a frutos tropicales, coco fresco y tangerina. Cuerpo sedoso y amargor medio.",
   },
   {
-    name: "ATREVIDA C/ ZANAHORIA Y CANELA",
+    name: "ATREVIDA",
     price: 4.5,
     category: "SOUR",
     sizecc: 473,
@@ -282,7 +282,7 @@ const cervezas = [
     description: "Golden sour. Sin fruta, sin lactosa. Muy refrescante, ácida y con buen cuerpo.",
   },
   {
-    name: "A LO BESTIA C/ MORAS Y TANGERINAS",
+    name: "A LO BESTIA",
     price: 4.5,
     category: "SOUR",
     sizecc: 473,

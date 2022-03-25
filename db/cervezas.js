@@ -1,6 +1,6 @@
 const cervezas = [
   {
-    name: "Tas Loco",
+    name: "TAS LOCO",
     price: 4.5,
     category: "IPA",
     sizecc: 473,

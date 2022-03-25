@@ -8,6 +8,7 @@ const articleSchema = new Schema(
     description: { type: String, minlength: 1, required: true },
     image: { type: String, minlength: 1, required: false },
     price: { type: Number, min: 1 },
+    sizecc: { type: String, minlength: 1, required: true },
     stock: { type: Number },
     category: { type: String }, //type: Schema.Types.ObjectId, ref: "Category"
     topSeller: { type: Boolean, default: false },

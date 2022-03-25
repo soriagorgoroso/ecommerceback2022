@@ -55,7 +55,7 @@ const cervezas = [
   {
     name: "FLOR DE LIO",
     price: 4.5,
-    category: "IPA ",
+    category: "IPA",
     sizecc: 473,
     ibus: "6.0%",
     stock: 15,
@@ -138,7 +138,7 @@ const cervezas = [
   {
     name: "CHÚCARA",
     price: 4.5,
-    category: "IPA ",
+    category: "IPA",
     sizecc: 473,
     ibus: "8.0%",
     stock: 15,
@@ -151,7 +151,7 @@ const cervezas = [
   {
     name: "CHASQUIBUM III",
     price: 4.5,
-    category: "IPA ",
+    category: "IPA",
     sizecc: 473,
     ibus: "5.5%",
     stock: 15,
@@ -225,7 +225,7 @@ const cervezas = [
   {
     name: "MANDALE MAGIA",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "6.0%",
     stock: 15,
@@ -237,7 +237,7 @@ const cervezas = [
   {
     name: "ATREVIDA C/ ZANAHORIA Y CANELA",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
     stock: 15,
@@ -249,7 +249,7 @@ const cervezas = [
   {
     name: "BOLONQUI",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "7.0%",
     stock: 15,
@@ -261,7 +261,7 @@ const cervezas = [
   {
     name: "PIZPIRETA",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "5.0%",
     stock: 15,
@@ -273,7 +273,7 @@ const cervezas = [
   {
     name: "AVIVADA",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
     stock: 15,
@@ -284,7 +284,7 @@ const cervezas = [
   {
     name: "A LO BESTIA C/ MORAS Y TANGERINAS",
     price: 4.5,
-    category: "Sour ",
+    category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
     stock: 15,

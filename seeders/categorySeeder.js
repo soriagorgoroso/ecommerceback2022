@@ -3,7 +3,7 @@ const Category = require("../models/Category");
 module.exports = async () => {
   await Category.deleteMany();
   const categories = [];
-  const categoryName = ["Ipa", "Apa", "Neipa", "Sour", "Stout", "Blonde"];
+  const categoryName = ["IPA", "APA", "NEIPA", "SOUR", "STOUT", "BLONDE"];
 
   categoryName.forEach((category) => categories.push({ name: category }));
   // for (let category in categoryName) {

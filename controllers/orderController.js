@@ -8,11 +8,10 @@ async function index(req, res) {
       res.json(orders);
     } else {
       const orders = await Order.find({ user: req.user.sub }).populate("user articles");
+      console.log(orders);
       res.json(orders);
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 }
 
 async function show(req, res) {

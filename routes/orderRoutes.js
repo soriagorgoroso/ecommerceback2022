@@ -4,9 +4,9 @@ const { index, show, create, update, destroy } = require("../controllers/orderCo
 const checkJwt = require("express-jwt");
 const tokenExist = require("../middlewares/tokenExist");
 
-orderRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 orderRouter.get("/", index);
 orderRouter.get("/:id", show);
+orderRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 //******    Midlleware para rutas privadas ************ */
 // //******    Ruta obtener order ************ */
 orderRouter.post("/", create);

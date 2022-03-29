@@ -56,12 +56,14 @@ async function newToken(req, res) {
 
       await User.updateOne({ _id: user.id }, { $push: { tokens: token } });
       res.status(200).json({
-        id: user.id,
+        sub: user.id,
         username: user.username,
         firstname: user.firstname,
         lastname: user.lastname,
         avatar: user.avatar,
         token: token,
+        //
+        isAdmin: user.isAdmin,
       });
     } else {
       res.status(401).json({ message: "error" });

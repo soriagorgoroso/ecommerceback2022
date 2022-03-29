@@ -2,7 +2,7 @@ const express = require("express");
 const categoryRouter = express.Router();
 const categoryController = require("../controllers/categoryController");
 const checkJwt = require("express-jwt");
-const tokenExist = require("../middlewares/tokenExist");
+//const tokenExist = require("../middlewares/tokenExist");
 const isAdmin = require("../middlewares/isAdmin.js");
 
 //*****    Ruta para home *************** */

@@ -32,6 +32,20 @@ module.exports = async () => {
   });
   users.push(user);
 
+  const user2 = new User({
+    firstname: "user2",
+    lastname: "user2",
+    username: "user2",
+    email: "user2@hackbeer.com",
+    password: "user",
+    address: "Calle B 1234",
+    telephone: 987654322,
+    isAdmin: false,
+    orders: [],
+    tokens: [],
+  });
+  users.push(user2);
+
   await User.create(users);
   console.log("Se corrió el seeder de Usuarios.");
 };

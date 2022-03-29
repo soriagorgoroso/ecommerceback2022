@@ -3,14 +3,17 @@ const User = require("../models/User");
 
 async function index(req, res) {
   try {
-    if (req.user.isAdmin) {
-      const orders = await Order.find().populate("user articles");
-      res.json(orders);
-    } else {
-      const orders = await Order.find({ user: req.user.sub }).populate("user articles");
-      console.log(orders);
-      res.json(orders);
-    }
+    const orders = await Order.find().populate("user");
+    res.json(orders);
+    // console.log(req.user);
+    // if (req.user.isAdmin) {
+    //   const orders = await Order.find().populate("user articles");
+    //   res.json(orders);
+    // } else {
+    //   const orders = await Order.find({ user: req.user.sub }).populate("user articles");
+    //   console.log(orders);
+    //   res.json(orders);
+    // }
   } catch (error) {}
 }
 

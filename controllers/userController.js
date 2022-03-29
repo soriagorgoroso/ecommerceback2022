@@ -16,7 +16,7 @@ async function show(req, res) {
   try {
     const user = await User.findOne({
       username: req.params.username,
-    });
+    }).populate("orders");
     res.json(user);
   } catch (error) {
     res.status(400).json({ error: "error", msg: "user not found" });
@@ -62,7 +62,7 @@ async function newToken(req, res) {
         lastname: user.lastname,
         avatar: user.avatar,
         token: token,
-        //
+        orders: user.orders,
         isAdmin: user.isAdmin,
       });
     } else {

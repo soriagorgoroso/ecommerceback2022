@@ -45,7 +45,7 @@ async function store(req, res) {
 async function newToken(req, res) {
   try {
     const user = await User.findOne({
-      $or: [{ username: req.body.username }, { email: req.body.email }],
+      email: req.body.email,
     });
 
     if (user && (await user.validPassword(req.body.password))) {

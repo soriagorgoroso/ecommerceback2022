@@ -40,6 +40,11 @@ async function create(req, res) {
     newOrderData.articles.map((article) => delete article.price);
     console.log(newOrderData);
     const newOrder = await Order.create(newOrderData);
+    const userLogged = req.user.sub;
+    const user = await User.findById(userLogged);
+    console.log(userLogged);
+    user.orders.push(newOrder);
+    user.save();
     res.json(newOrder);
   } catch (error) {
     console.log(error);

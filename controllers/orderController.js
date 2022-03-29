@@ -36,7 +36,10 @@ async function show(req, res) {
 
 async function create(req, res) {
   try {
-    const newOrderData = req.body;
+    let newOrderData = req.body;
+    delete newOrderData.status;
+    newOrderData.articles.map((article) => delete article.price);
+    console.log(newOrderData);
     const newOrder = await Order.create(newOrderData);
     res.json(newOrder);
   } catch (error) {

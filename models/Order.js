@@ -6,12 +6,12 @@ const orderSchema = new Schema(
     user: { type: Schema.Types.ObjectId, ref: "User" },
     articles: [
       {
-        article: { type: Schema.Types.ObjectId, ref: "Article" },
+        article: { type: String },
         quantity: { type: Number },
         price: { type: Number },
       },
     ],
-    state: {
+    status: {
       type: String,
       enum: ["Sin Pago", "Pago", "Enviado", "Entregado"],
       default: "Sin Pago",

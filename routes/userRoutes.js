@@ -1,20 +1,22 @@
 const express = require("express");
 const userRouter = express.Router();
 const userController = require("../controllers/userController");
-
-// Display a listing of the resource.
-userRouter.get("/users", userController.index);
-
-// Display the specified resource.
-userRouter.get("/users/:username", userController.show);
+const checkJwt = require("express-jwt");
+const tokenExist = require("../middlewares/tokenExist");
 
 // Store a newly created resource in storage.
-userRouter.post("/users", userController.store);
+userRouter.post("/", userController.store);
+//******    Midlleware para rutas privadas ************ */
+userRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
+//******    Ruta obtener user ************ */
+userRouter.use(tokenExist);
+// Display a listing of the resource.
+userRouter.get("/", userController.index);
+
+// Display the specified resource.
+userRouter.get("/:username", userController.show);
 
 // Update the specified resource in storage.
-userRouter.patch("/users/:username", userController.update);
-
-//Login
-userRouter.post("/tokens", userController.newToken);
+userRouter.patch("/:username", userController.update);
 
 module.exports = userRouter;

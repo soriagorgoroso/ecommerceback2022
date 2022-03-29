@@ -44,22 +44,30 @@ async function store(req, res) {
 
 async function newToken(req, res) {
   try {
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOne({
+      $or: [{ username: req.body.username }, { email: req.body.email }],
+    });
 
-    const correctPassword = await user.validPassword(req.body.password);
+    if (user && (await user.validPassword(req.body.password))) {
+      const token = jwt.sign(
+        { sub: user.id, isAdmin: user.isAdmin },
+        process.env.ACCESS_TOKEN_SECRET,
+      );
 
-    if (correctPassword) {
-      const newPayload = {
-        sub: user.email,
-        userID: user.id,
-        isAdmin: user.isAdmin,
-      };
-      const newJwt = jwt.sign(newPayload, process.env.ACCESS_TOKEN_SECRET);
-
-      res.json({ id: user.id, email: user.email, isAdmin: user.isAdmin, token: newJwt });
+      await User.updateOne({ _id: user.id }, { $push: { tokens: token } });
+      res.status(200).json({
+        id: user.id,
+        username: user.username,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        avatar: user.avatar,
+        token: token,
+      });
+    } else {
+      res.status(401).json({ message: "error" });
     }
   } catch (error) {
-    res.status(401).json(error);
+    res.status(400).json({ message: error });
   }
 }
 

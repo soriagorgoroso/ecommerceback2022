@@ -1,7 +1,7 @@
 const cervezas = [
   {
     name: "TAS LOCO",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -17,7 +17,7 @@ const cervezas = [
 
   {
     name: "ALBOROTO",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -30,7 +30,7 @@ const cervezas = [
 
   {
     name: "FATAL",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -42,7 +42,7 @@ const cervezas = [
   },
   {
     name: "DESMADRE",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -54,7 +54,7 @@ const cervezas = [
   },
   {
     name: "FLOR DE LIO",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.0%",
@@ -66,7 +66,7 @@ const cervezas = [
   },
   {
     name: "ROMPECABEZAS",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "10.5%",
@@ -78,7 +78,7 @@ const cervezas = [
   },
   {
     name: "DOBLE CHASQUIBUM",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.5%",
@@ -90,7 +90,7 @@ const cervezas = [
   },
   {
     name: "PATATÚS",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -102,7 +102,7 @@ const cervezas = [
   },
   {
     name: "CHUSMA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -113,7 +113,7 @@ const cervezas = [
   },
   {
     name: "RENEGADA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -125,7 +125,7 @@ const cervezas = [
   },
   {
     name: "FUA MONO",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -137,7 +137,7 @@ const cervezas = [
   },
   {
     name: "CHÚCARA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "8.0%",
@@ -150,7 +150,7 @@ const cervezas = [
 
   {
     name: "CHASQUIBUM III",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "5.5%",
@@ -162,7 +162,7 @@ const cervezas = [
   },
   {
     name: "PITUCA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -174,7 +174,7 @@ const cervezas = [
   },
   {
     name: "OPA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.8%",
@@ -186,7 +186,7 @@ const cervezas = [
   },
   {
     name: "SIN VUELTAS",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "6.5%",
@@ -199,7 +199,7 @@ const cervezas = [
 
   {
     name: "MATUNGA",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -212,7 +212,7 @@ const cervezas = [
 
   {
     name: "MATURRANGO",
-    price: 4.5,
+    price: 5,
     category: "IPA",
     sizecc: 473,
     ibus: "7.0%",
@@ -224,7 +224,7 @@ const cervezas = [
   },
   {
     name: "MANDALE MAGIA",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "6.0%",
@@ -236,7 +236,7 @@ const cervezas = [
   },
   {
     name: "ATREVIDA",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
@@ -248,7 +248,7 @@ const cervezas = [
   },
   {
     name: "BOLONQUI",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "7.0%",
@@ -260,7 +260,7 @@ const cervezas = [
   },
   {
     name: "PIZPIRETA",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "5.0%",
@@ -272,7 +272,7 @@ const cervezas = [
   },
   {
     name: "AVIVADA",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
@@ -283,7 +283,7 @@ const cervezas = [
   },
   {
     name: "A LO BESTIA",
-    price: 4.5,
+    price: 5,
     category: "SOUR",
     sizecc: 473,
     ibus: "4.5%",
@@ -295,7 +295,7 @@ const cervezas = [
   },
   {
     name: "HUÉ LITE",
-    price: 4.5,
+    price: 5,
     category: "LAGER",
     sizecc: 355,
     ibus: "4.0%",
@@ -307,7 +307,7 @@ const cervezas = [
   },
   {
     name: "GUIDAÍ",
-    price: 4.5,
+    price: 5,
     category: "LAGER",
     sizecc: 473,
     ibus: "5.0%",
@@ -319,7 +319,7 @@ const cervezas = [
   },
   {
     name: "LA DÓCIL",
-    price: 4.5,
+    price: 5,
     category: "LAGER",
     sizecc: 473,
     ibus: "4.5%",
@@ -331,7 +331,7 @@ const cervezas = [
   },
   {
     name: "ZAPICÁN",
-    price: 4.5,
+    price: 5,
     category: "LAGER",
     sizecc: 473,
     ibus: "6.0%",
@@ -343,7 +343,7 @@ const cervezas = [
   },
   {
     name: "CRUZADA",
-    price: 4.5,
+    price: 5,
     category: "BELGA",
     sizecc: 473,
     ibus: "9.0%",
@@ -355,7 +355,7 @@ const cervezas = [
   },
   {
     name: "A TROCHE Y MOCHE",
-    price: 4.5,
+    price: 5,
     category: "APA",
     sizecc: 473,
     ibus: "5.2%",

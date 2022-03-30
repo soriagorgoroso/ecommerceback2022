@@ -19,7 +19,10 @@ async function index(req, res) {
 
 async function show(req, res) {
   try {
-    if (req.user.isAdmin) {
+    const id = req.params.id;
+    const order = await Order.findById(id).populate("user articles");
+    res.json(order);
+    /* if (req.user.isAdmin) {
       const id = req.params.id;
       const order = await Order.findById(id).populate("user articles");
       res.json(order);
@@ -30,7 +33,7 @@ async function show(req, res) {
         return res.json(order);
       }
       return res.status(403).json({ message: "No tiene permisos para ver esta orden" });
-    }
+    } */
   } catch (error) {
     console.log(error);
   }

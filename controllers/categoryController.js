@@ -13,7 +13,7 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const category = await Category.findOne({ name: req.params.name });
-    console.log(category);
+    //console.log(category);
     //const formattedDate = format(postCategory.createdAt, "MMMM yyyy");
     //console.log(formattedDate);
 
@@ -23,12 +23,12 @@ async function show(req, res) {
     res.status(404).json({ message: "error" });
   }
 }
+
 // Show the form for creating a new resource
 async function create(req, res) {
   try {
     const newCategoryData = req.body;
     const newCategory = await Category.create(newCategoryData);
-
     res.json(newCategory);
   } catch (error) {
     console.log(error);

@@ -8,11 +8,10 @@ const isAdmin = require("../middlewares/isAdmin.js");
 orderRouter.get("/", index);
 orderRouter.get("/:id", show);
 orderRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
-//******    Midlleware para rutas privadas ************ */
-// //******    Ruta obtener order ************ */
+orderRouter.post("/", create);
+
 orderRouter.use(isAdmin);
 
-orderRouter.post("/", create);
 orderRouter.patch("/:id", update);
 orderRouter.delete("/:id", destroy);
 // // //******    Ruta para obtener order ************ */

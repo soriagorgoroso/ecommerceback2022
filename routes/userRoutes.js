@@ -21,5 +21,7 @@ userRouter.get("/:username", userController.show);
 
 // Update the specified resource in storage.
 userRouter.patch("/:username", userController.update);
+//*****    logout           ************ */
+userRouter.post("/logout", userController.deleteToken);
 
 module.exports = userRouter;

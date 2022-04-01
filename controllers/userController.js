@@ -73,6 +73,18 @@ async function newToken(req, res) {
   }
 }
 
+async function deleteToken(req, res) {
+  try {
+    const tokenBearer = req.headers.authorization.split(" ");
+    token = tokenBearer[1];
+
+    await User.findByIdAndUpdate(req.user.sub, { $pull: { tokens: token } });
+
+    res.status(200).json({ message: "logout ok" });
+  } catch (error) {
+    res.status(400).json({ message: error });
+  }
+}
 // Show the form for editing the specified resource.
 //async function edit(req, res) {}
 
@@ -102,4 +114,5 @@ module.exports = {
   update,
   //destroy,
   newToken,
+  deleteToken,
 };

@@ -57,7 +57,18 @@ async function create(req, res) {
   }
 }
 
-async function update(req, res) {}
+async function update(req, res) {
+  try {
+    let orderId = req.params.id;
+    let fieldsToEdit = req.body;
+
+    const updatedOrderData = await Order.updateOne({ orderId }, fieldsToEdit);
+    console.log(updatedOrderData);
+    res.json(updatedOrderData);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 async function destroy(req, res) {}
 

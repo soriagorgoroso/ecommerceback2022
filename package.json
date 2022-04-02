@@ -26,7 +26,8 @@
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "vercel": "^24.0.1"
   },
   "description": "Hack Academy - Ejemplo de MVC y Sequelize",
   "devDependencies": {

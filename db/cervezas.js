@@ -143,7 +143,7 @@ const cervezas = [
     ibus: "8.0%",
     stock: 15,
     topSeller: false,
-    image: "CHÚCARA.jpg",
+    image: "CHUCARA.jpg",
     description:
       "Volvió nuestra Doble New England Ipa, esta vez con lúpulos Azacca y El Dorado. Predominan notas cítricas y a ananá",
   },
@@ -301,7 +301,7 @@ const cervezas = [
     ibus: "4.0%",
     stock: 15,
     topSeller: false,
-    image: "HUÉLITE.jpg",
+    image: "HUELITE.jpg",
     description:
       "Nuestra cerveza para todas las ocasiones. Esta lager baja en calorías es ideal para todos los gustos, suave, limpia y refrescante.",
   },
@@ -313,7 +313,7 @@ const cervezas = [
     ibus: "5.0%",
     stock: 15,
     topSeller: false,
-    image: "GUIDAÍ.jpg",
+    image: "GUIDAI.jpg",
     description:
       "Cerveza lager de color rojo profundo con notas sutiles a caramelo y galletas tostadas debido a las maltas especiales que utilizamos. Limpia, refrescante y maltosa. El nombre proviene del idioma Charrúa. Guidaí = Luna.",
   },
@@ -325,7 +325,7 @@ const cervezas = [
     ibus: "4.5%",
     stock: 15,
     topSeller: false,
-    image: "LADÓCIL.jpg",
+    image: "LADOCIL.jpg",
     description:
       "Ligera y refrescante como nuestra Hué Lite, pero con todo el sabor y aroma de una NE Ipa. Light lager con dry hop de lúpulo Citra.",
   },
@@ -337,7 +337,7 @@ const cervezas = [
     ibus: "6.0%",
     stock: 15,
     topSeller: false,
-    image: "ZAPICÁN.jpg",
+    image: "ZAPICAN.jpg",
     description:
       "Usamos lúpulos Cascade y Amarillo sobre una base de malta Maris Otter y un toque de malta caramelo. Es de amargor medio-alto y final seco con aroma a pino y cítricos. El nombre nace en honor al épico cacique charrúa Zapicán, líder de la batalla de San Gabriel en 1573. Uno de los primeros uruguayos que defendió estas tierras.",
   },

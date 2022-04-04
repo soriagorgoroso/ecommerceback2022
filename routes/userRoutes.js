@@ -3,10 +3,10 @@ const userRouter = express.Router();
 const userController = require("../controllers/userController");
 const checkJwt = require("express-jwt");
 
-//*****    logout           ************ */
-userRouter.post("/logout", userController.deleteToken);
 // Store a newly created resource in storage.
 userRouter.post("/", userController.store);
+//*****    logout           ************ */
+userRouter.post("/logout", userController.deleteToken);
 //const tokenExist = require("../middlewares/tokenExist");
 const isAdmin = require("../middlewares/isAdmin.js");
 //******    Midlleware para rutas privadas ************ */

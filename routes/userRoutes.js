@@ -5,12 +5,12 @@ const checkJwt = require("express-jwt");
 
 // Store a newly created resource in storage.
 userRouter.post("/", userController.store);
+//******    Midlleware para rutas privadas ************ */
+userRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 //*****    logout           ************ */
 userRouter.post("/logout", userController.deleteToken);
 //const tokenExist = require("../middlewares/tokenExist");
 const isAdmin = require("../middlewares/isAdmin.js");
-//******    Midlleware para rutas privadas ************ */
-userRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 //******    Ruta obtener user ************ */
 userRouter.use(isAdmin);
 

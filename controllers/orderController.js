@@ -40,11 +40,12 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
+  //console.log("hola");
   try {
     let newOrderData = req.body;
+    console.log(newOrderData);
     delete newOrderData.status;
     newOrderData.articles.map((article) => delete article.price);
-    console.log(newOrderData);
     const newOrder = await Order.create(newOrderData);
     const userLogged = req.user.sub;
     const user = await User.findById(userLogged);

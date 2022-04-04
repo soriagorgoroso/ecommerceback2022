@@ -7,7 +7,7 @@ const orderSchema = new Schema(
     orderNumber: { type: Number, $inc: { sequence_value: 1 } },
     articles: [
       {
-        article: { type: String },
+        name: { type: String },
         quantity: { type: Number },
         price: { type: Number },
       },

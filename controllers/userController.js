@@ -60,10 +60,10 @@ async function newToken(req, res) {
         username: user.username,
         firstname: user.firstname,
         lastname: user.lastname,
-        avatar: user.avatar,
         token: token,
         orders: user.orders,
         isAdmin: user.isAdmin,
+        email: user.email,
       });
     } else {
       res.status(401).json({ message: "error" });

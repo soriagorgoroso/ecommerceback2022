@@ -2,12 +2,13 @@ const express = require("express");
 const orderRouter = express.Router();
 const { index, show, create, update, destroy } = require("../controllers/orderController");
 const checkJwt = require("express-jwt");
+const jwtConfig = { secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] };
 //const tokenExist = require("../middlewares/tokenExist");
 const isAdmin = require("../middlewares/isAdmin.js");
 
+orderRouter.use(checkJwt(jwtConfig));
 orderRouter.get("/", index);
 orderRouter.get("/:id", show);
-orderRouter.use(checkJwt({ secret: process.env.ACCESS_TOKEN_SECRET, algorithms: ["HS256"] }));
 orderRouter.post("/", create);
 
 orderRouter.use(isAdmin);

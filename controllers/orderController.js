@@ -3,11 +3,6 @@ const User = require("../models/User");
 
 async function index(req, res) {
   try {
-    console.log(req.user);
-    console.log("hola");
-    //const orders = await Order.find().populate("user");
-    //res.json(orders);
-
     if (req.user.isAdmin) {
       const orders = await Order.find().populate("user");
       res.json(orders);
@@ -23,9 +18,6 @@ async function index(req, res) {
 
 async function show(req, res) {
   try {
-    // const id = req.params.id;
-    // const order = await Order.findById(id).populate("user articles");
-    // res.json(order);
     if (req.user.isAdmin) {
       const id = req.params.id;
       const order = await Order.findById(id).populate("user articles");

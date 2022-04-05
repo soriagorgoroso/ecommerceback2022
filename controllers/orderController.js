@@ -3,18 +3,22 @@ const User = require("../models/User");
 
 async function index(req, res) {
   try {
+    console.log(req.user);
+    console.log("hola");
     const orders = await Order.find().populate("user");
     res.json(orders);
-    // console.log(req.user);
-    // if (req.user.isAdmin) {
-    //   const orders = await Order.find().populate("user articles");
-    //   res.json(orders);
-    // } else {
-    //   const orders = await Order.find({ user: req.user.sub }).populate("user articles");
-    //   console.log(orders);
-    //   res.json(orders);
-    // }
-  } catch (error) {}
+
+    /* if (req.user.isAdmin) {
+      const orders = await Order.find().populate("user");
+      res.json(orders);
+    } else {
+      const orders = await Order.find({ user: req.user.sub }).populate("user");
+      console.log(orders);
+      res.json(orders);
+    } */
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function show(req, res) {
@@ -40,7 +44,6 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
-  //console.log("hola");
   try {
     let newOrderData = req.body;
     console.log(newOrderData);

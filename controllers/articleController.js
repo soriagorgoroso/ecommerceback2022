@@ -46,7 +46,7 @@ async function update(req, res) {
 async function destroy(req, res) {
   try {
     const id = req.params.id;
-    const deletedArticle = await Article.deleteById(id);
+    const deletedArticle = await Article.findByIdAndDelete(id);
     res.json(deletedArticle);
   } catch (error) {
     console.log(error);

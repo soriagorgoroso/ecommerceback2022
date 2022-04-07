@@ -34,9 +34,7 @@ async function update(req, res) {
   try {
     const articleId = req.params.id;
     const fieldsToEdit = req.body;
-
-    const updatedArticleData = await Article.updateOne({ articleId }, fieldsToEdit);
-
+    const updatedArticleData = await Article.findByIdAndUpdate(articleId, fieldsToEdit);
     res.json(updatedArticleData);
   } catch (error) {
     console.log(error);

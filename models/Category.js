@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const categorySchema = new Schema(
   {
-    name: { type: String, minlength: 1, required: true },
+    name: { type: String, minlength: 1, required: true, uppercase: true },
   },
   { timestamps: true },
 );

@@ -17,6 +17,7 @@ async function show(req, res) {
     const user = await User.findOne({
       username: req.params.username,
     });
+    console.log(user);
     res.json(user);
   } catch (error) {
     res.status(400).json({ error: "error", msg: "user not found" });

@@ -101,7 +101,15 @@ async function update(req, res) {
 }
 
 // Remove the specified resource from storage.
-//async function destroy(req, res) {}
+async function destroy(req, res) {
+  try {
+    const id = req.params.id;
+    const deletedUser = await User.findByIdAndDelete(id);
+    res.json(deletedUser);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 // Otros handlers...
 // ...
@@ -113,7 +121,7 @@ module.exports = {
   store,
   //edit,
   update,
-  //destroy,
+  destroy,
   newToken,
   deleteToken,
 };

@@ -24,4 +24,7 @@ userRouter.get("/", userController.index);
 
 // Update the specified resource in storage.
 
+//delete
+userRouter.delete("/:id", userController.destroy);
+
 module.exports = userRouter;
